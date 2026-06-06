@@ -1,0 +1,35 @@
+section,item_code,question_text,question_type,options,required,construct,hypothesis,notes
+A,A1,I confirm I am 18+ and consent to participate in this academic survey.,single_choice,Yes|No,Yes,,,Branching: No -> exit
+A,A2,"Are you an investor, finance professional, or industry participant in Indian capital markets?",single_choice,Yes|No,Yes,,,Branching: No -> exit
+A,A3,Which best describes you?,single_choice,Retail investor|HNI|Institutional investor|Wealth advisor|REIT-InvIT industry professional|Academic-researcher|Other,Yes,,,Used in chi-square chi2-1
+B,B1,Age band,single_choice,18-25|26-35|36-45|46-55|56-65|65+,Yes,,,
+B,B2,City / region of residence,single_choice,Bengaluru|Other Karnataka|Other metro India|Non-metro India|Outside India,Yes,,,Used in chi-square chi2-4
+B,B3,Investment experience,single_choice,< 1 yr|1-3 yrs|3-5 yrs|5-10 yrs|10+ yrs,Yes,,,Used in chi-square chi2-3 / covariate
+B,B4,Approximate investable corpus,single_choice,< Rs 5L|Rs 5L-25L|Rs 25L-1Cr|Rs 1Cr-5Cr|> Rs 5Cr|Prefer not to say,Yes,,,Used in chi-square chi2-5 / covariate
+B,B5,Asset classes currently held (multi-select),multi_choice,Equity|Mutual funds|Debt-bonds|Real estate-physical|REITs|InvITs|Gold|Crypto|Other,Yes,,,
+C,AWARE1,I am aware that REITs are listed and traded on Indian stock exchanges.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,AWARE,H6,
+C,AWARE2,I am aware that InvITs are listed and traded on Indian stock exchanges.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,AWARE,H6,
+C,AWARE3,I understand how REITs/InvITs generate income (rent/toll/transmission charges) and distribute it.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,AWARE,H6,
+C,AWARE4,I am aware of the Small & Medium REIT (SM REIT) framework introduced by SEBI.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,AWARE,H6,
+C,AWARE5,I can name at least one listed Indian REIT or InvIT.,open_text,,Yes,AWARE,H6,Coded to binary 0/1 -> aware5_flag
+D,DIVERS1,Adding REITs/InvITs to a portfolio reduces overall risk.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,DIVERS,H1,
+D,DIVERS2,REIT/InvIT returns move differently from equities (low correlation).,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,DIVERS,H1,
+D,DIVERS3,"REITs/InvITs provide stable, predictable income relative to stocks.",likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,DIVERS,H1,
+D,DIVERS4,REITs/InvITs are a useful inflation/real-asset hedge.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,DIVERS,H1,
+E,RISKP1,REIT/InvIT prices are sensitive to interest-rate changes.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,RISKP,H5,
+E,RISKP2,I am concerned about liquidity when buying/selling REITs/InvITs.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,RISKP,H5,
+E,RISKP3,I find REIT/InvIT distributions' taxation complex.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,RISKP,H5,
+E,RISKP4,I worry about valuation transparency of underlying assets.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,RISKP,H5,
+ATTN,ATTN1,Please select 'Agree' for this item.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,,,Attention check between E and F; non-Agree flags record
+F,REGTRUST1,SEBI regulation of REITs/InvITs adequately protects investors.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,REGTRUST,H7,
+F,REGTRUST2,Disclosure/reporting by REITs/InvITs is sufficient for informed decisions.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,REGTRUST,H7,
+F,REGTRUST3,The regulatory framework increases my confidence to invest.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,REGTRUST,H7,
+G,BLR1,Bengaluru's office-property market is attractive for REIT investment.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,BLR,H4,
+G,BLR2,I would prefer REITs with significant Bengaluru/South-India office exposure.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,BLR,H4,Used in chi-square chi2-4
+G,BLR3,Growth of Bengaluru's GCC/IT-office demand makes office REITs more attractive.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,BLR,H4,
+H,ADOPT1,I intend to invest (or invest more) in REITs within the next 12 months.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,ADOPT,H6,Feeds adopt_binary
+H,ADOPT2,I intend to invest (or invest more) in InvITs within the next 12 months.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,ADOPT,H6,Feeds adopt_binary
+H,ADOPT3,I would recommend REITs/InvITs to peers.,likert_5,Strongly Disagree=1|Disagree=2|Neutral=3|Agree=4|Strongly Agree=5,Yes,ADOPT,H6,
+H,ADOPT4,Have you ever invested in a REIT or InvIT?,single_choice,Yes-currently|Yes-previously|No-but considering|No-not considering,Yes,ADOPT,H6,DV adopt_status; feeds adopt_binary; chi-square chi2-1/2
+I,I1,What is the single biggest barrier to your investing in REITs/InvITs?,open_text,,No,,,
+I,I2,Any additional comments.,open_text,,No,,,
