@@ -1,0 +1,7 @@
+scenario,firr_pct,vs_wacc
+Base Case (ADB),1.921,Needs subsidy
+Ridership +20%,2.305,Needs subsidy
+Ridership -20%,1.537,Needs subsidy
+Cost +20%,1.601,Needs subsidy
+Cost -20%,2.401,Needs subsidy
+"T-InvIT (+10% rid, -10% cost)",2.348,Needs subsidy
