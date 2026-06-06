@@ -1,0 +1,5 @@
+metric,value_pct,source
+Post-tax FIRR (project),1.921,ADB Table FA-1
+"Post-tax WACC (real, reported)",2.629,ADB Table FA-2
+WACC recomputed from components,2.6287760000000002,computed
+Viability gap (FIRR - WACC),-0.708,computed
