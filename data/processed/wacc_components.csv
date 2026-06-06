@@ -1,0 +1,4 @@
+source,weight,nominal_cost,real_cost
+JICA Loan,0.1724,0.0142,0.0
+ADB Loan,0.271,0.0258,0.0054
+Equity,0.5566,0.0864,0.0446
