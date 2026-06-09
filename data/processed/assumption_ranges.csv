@@ -1,0 +1,8 @@
+parameter,dist,low,mode,high,source
+trip_length_km,triangular,9.0,12.0,15.0,ADB FA uses pax-km revenue; 12 km is typical Indian metro average lead (Namma Metro reported lead ~12-14 km; DMRC ~15 km). Range 9-15 km brackets BMRCL/MoHUA metro lead-distance disclosures.
+fare_per_paxkm,triangular,2.57,2.85,3.42,"ADB FY2020 base Rs 2.85/pax-km. +/-10% low, +20% high to allow modest fare indexation (ADB assumed no escalation; real fare revisions in Indian metros historically lag inflation)."
+ridership_multiplier,normal,0.7,1.0,1.3,"ADB ridership forecasts for Indian metros have historically over-predicted (CAG/MoHUA reviews show 30-50% shortfalls). Mean 1.0, SD 0.12 truncated to [0.70, 1.30] reflects this demand-risk band."
+cost_multiplier,triangular,0.95,1.0,1.3,Indian metro capex commonly overruns 10-30% (Flyvbjerg infrastructure cost-overrun literature; Namma Metro Phase-2 escalations). Downside capped at -5%.
+ebitda_margin,normal,0.33,0.41,0.49,"ADB FA states ~41% EBITDA margin by FY2027. SD 0.03 truncated to [0.33,0.49] covers O&M-cost uncertainty (energy, staff, maintenance)."
+post2031_growth,triangular,0.025,0.0411,0.055,ADB stated 4.11% p.a. post-2031. Band 2.5-5.5% reflects urban-transit demand growth uncertainty for Bengaluru.
+salvage_fraction,triangular,0.1,0.2,0.3,Terminal/residual value of long-life metro assets (civil + rolling stock). Range reflects RBI/infra-asset depreciation conventions; flagged as assumption.
