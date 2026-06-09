@@ -82,7 +82,28 @@ logged in a status file under `data/raw/`.
 | `data/processed/tokenization_scenario.csv` | same | T-InvIT lever scenario |
 | `figures/fig1_wacc_firr_gap.png` … `fig4_*` | same | 4 figures at 300 DPI |
 
+### Rigour-uplift outputs (2026-06-09; produced by notebooks/03_montecarlo_firr.py, seed 53326)
+
+| File | Built by | Contents |
+|---|---|---|
+| `data/processed/mc_firr_summary.csv` | `notebooks/03_montecarlo_firr.py` | 20,000-draw Monte Carlo FIRR summary: mean 1.60%, median 1.60%, SD 0.84 pp, 90% CI [0.22%, 2.96%], P(FIRR>WACC)=10.9%, P(FIRR>0)=97.2% |
+| `data/processed/mc_firr_draws.csv` | same | Full 20,000-draw FIRR vector |
+| `data/processed/firr_tornado.csv` | same | Spearman-rank variance decomposition (ridership 20.7%, trip length 17.5%, capital cost 16.5%, salvage 12.6%, EBITDA 12.3%, fare 10.3%, growth 10.0%) |
+| `data/processed/assumption_ranges.csv` | same | Seven MC assumption ranges, each with documented rationale |
+| `data/processed/calibration_log.csv` | same | Single transparent additive calibration shift (+2.943 pp) reconciling model IRR to ADB's published 1.921% |
+| `data/processed/tokenization_coe_sweep.csv` | same | Cost-of-equity break-even sweep (gap closes at ~130 bp reduction) |
+| `figures/fig5_mc_firr_distribution.png` … `fig8_mc_sensitivity_surface.png` | same | 4 Monte Carlo figures at 300 DPI |
+
+The Monte Carlo model **re-solves the project IRR from an explicit annual cash-flow stream** rather than scaling a scalar; it is calibrated to reproduce ADB's published FIRR exactly via a single documented shift, and propagates uncertainty over seven defended assumption distributions. See `CHANGELOG_P1.md` for the point-by-point response to the rigour audit.
+
 All forecast figures are labelled "ADB-parameterised projection": they
 interpolate/extrapolate strictly between ADB's two published ridership anchors
 (FY2025, FY2031) using ADB's own stated 4.11% p.a. growth. No observation is
-fabricated.
+fabricated. The ADB Financial Analysis PDF (ind-53326-001-fa.pdf) is **not
+redistributed** — adb.org returns HTTP 403 to automated download, so the
+canonical URL, access date, and full extracted figure set are logged in
+`data/raw/JICA_loans/ADB/ADB_FA_download_status.md`. The practitioner survey arm
+remains **unfielded**; no survey responses have been collected or fabricated.
+
+---
+*Maintainer: Sandeep S (@SanKabira). Last updated: 2026-06-09 (Scopus/Q1 rigour uplift).*
