@@ -1,0 +1,2 @@
+base_model_irr_pct,adb_reported_firr_pct,calibration_shift_pp,method,calibrated_base_pct
+-1.0222857208321834,1.921,2.9432857208321836,additive shift to ADB benchmark (public anchors omit ADB cost ramps/financing),1.921
